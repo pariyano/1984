@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Description — 1984</title>
+
+  <style>
+    :root{
+      --bg1:#0f172a;
+      --bg2:#111827;
+      --card:#0b1220cc;
+      --border:#ffffff1f;
+      --text:#e5e7eb;
+      --muted:#a5b4fc;
+      --accent:#22c55e;
+      --quote:#f472b6;
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 15% 10%, #7c3aed33 0%, transparent 55%),
+        radial-gradient(800px 500px at 85% 20%, #22c55e2a 0%, transparent 55%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      padding: 44px 18px;
+    }
+
+    .container{
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    /* Header background color (required) */
+    header{
+      background: linear-gradient(135deg, #ffffff12, #ffffff06);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 22px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    header .top{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    header h1{
+      margin:0;
+      font-size: clamp(22px, 2.6vw, 30px);
+      letter-spacing: .2px;
+    }
+
+    .badge{
+      font-size: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #00000022;
+      color: #d1fae5;
+    }
+
+    .meta{
+      margin-top: 10px;
+      line-height: 1.7;
+      color: #e5e7eb;
+      font-size: 15.5px;
+    }
+
+    .meta b{ color:#ffffff; }
+    .meta u{ text-underline-offset: 4px; text-decoration-thickness: 2px; }
+    .meta i{ color: var(--muted); }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    @media (min-width: 820px){
+      .grid{
+        grid-template-columns: 320px 1fr;
+        align-items: start;
+      }
+    }
+
+    /* Image styling: borders + size via width/height attributes (required) */
+    .coverCard{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .coverLink{
+      display:block;
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .cover{
+      display:block;
+      margin: 0 auto;
+      border: 3px solid #ffffff40;  /* border (required) */
+      border-radius: 14px;
+      box-shadow: 0 16px 40px rgba(0,0,0,.45);
+      transition: transform .18s ease, border-color .18s ease;
+    }
+
+    .coverLink:hover .cover{
+      transform: translateY(-3px);
+      border-color:#ffffff70;
+    }
+
+    .hint{
+      margin: 12px 0 0;
+      font-size: 13px;
+      color: #cbd5e1;
+      text-align:center;
+      opacity:.9;
+    }
+
+    .contentCard{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Different background colors for paragraphs (required) */
+    .p1{
+      background: linear-gradient(135deg, #22c55e1a, #22c55e08);
+      border: 1px solid #22c55e33;
+      padding: 14px 14px;
+      border-radius: 14px;
+      margin: 0 0 14px 0;
+      color:#eafff2;
+    }
+
+    .p2{
+      background: linear-gradient(135deg, #a855f71a, #a855f708);
+      border: 1px solid #a855f733;
+      padding: 14px 14px;
+      border-radius: 14px;
+      margin: 0;
+      color:#f2eaff;
+    }
+
+    a{
+      color: #93c5fd;
+      text-decoration: none;
+      border-bottom: 1px dashed #93c5fd80;
+    }
+
+    a:hover{
+      color:#bfdbfe;
+      border-bottom-color:#bfdbfe;
+    }
+
+    /* Quote text different color (required) */
+    blockquote{
+      margin: 16px 0 0;
+      padding: 14px 16px;
+      border-left: 5px solid var(--quote);
+      background: #f472b61a;
+      border-radius: 14px;
+      color: #ffd1ea; /* quote text color */
+      font-style: italic;
+    }
+
+    .footerNote{
+      margin-top: 16px;
+      font-size: 12.5px;
+      color:#cbd5e1;
+      opacity:.9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header (required) -->
+    <header>
+      <div class="top">
+        <h1>Book Presentation</h1>
+        <span class="badge">Homework Webpage</span>
+      </div>
+
+      <!-- Book title bold, author underlined, other language italic (required) -->
+      <p class="meta">
+        Book: <b>1984</b> • Author: <u>George Orwell</u> • Title in another language:
+        <i>Mil novecientos ochenta y cuatro</i>
+      </p>
+    </header>
+
+    <div class="grid">
+      <!-- Image with link (required) -->
+      <div class="coverCard">
+        <a class="coverLink"
+           href="https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"
+           target="_blank"
+           rel="noopener"
+           title="Open a webpage about 1984 (Wikipedia)">
+          <img
+            class="cover"
+            src="img.jpeg"
+            alt="Cover of the book 1984"
+            title="1984 by George Orwell"
+            height="250"
+            width="200"
+          />
+        </a>
+        <p class="hint">Click the cover to open a webpage about the same book.</p>
+      </div>
+
+      <div class="contentCard">
+        <!-- Paragraph 1 (required) with a link associated to a fragment of text (required) -->
+        <p class="p1">
+          <b>1984</b> is a dystopian novel about a society controlled through surveillance, propaganda,
+          and the manipulation of language. It follows Winston Smith, who begins to question the
+          “official truth” in a world where independent thought is dangerous.
+          <br /><br />
+          Fragment link:
+          <a href="https://www.britannica.com/topic/Nineteen-Eighty-four" target="_blank" rel="noopener">
+            read a short overview here
+          </a>.
+        </p>
+
+        <!-- Paragraph 2 (required) -->
+        <p class="p2">
+          What makes the book memorable is how it shows power working not only through force,
+          but also through controlling information and rewriting reality. Even today, it’s often used
+          to discuss privacy, media manipulation, and political fear.
+        </p>
+
+        <!-- Quote (required) -->
+        <blockquote>
+          “Big Brother is watching you.” — George Orwell
+        </blockquote>
+
+        <div class="footerNote">
+          Tip: make sure <b>index.html</b> and <b>img.jpeg</b> are in the same GitHub repository folder.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
